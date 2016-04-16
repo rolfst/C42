@@ -1,0 +1,50 @@
+{
+    "meta_data": {
+        "count": 1
+    },
+    "data": [{
+        "id": "811003bb26ce6df198a6f6ad77aadcbb_14601157609581",
+        "event_type": "todo",
+        "calendar_ids": [],
+        "start": null,
+        "end": null,
+        "start_timezone": null,
+        "end_timezone": null,
+        "all_day": null,
+        "title": "Drink a cup of coffee with C42 Team",
+        "description": "",
+        "start_location": {
+            "id": "d9a69dca271f155c29eb3c373075f8c9f76531e1",
+            "text": "Oude Delft, Delft",
+            "address": "Oude Delft",
+            "postcode": "",
+            "city": "Delft",
+            "geo": {
+                "latitude": 52.0104238,
+                "longitude": 4.3568388
+            },
+            "labels": []
+        },
+        "end_location": null,
+        "creator": {},
+        "created": "2016-04-08T11:42:40.958117Z",
+        "modified": "2016-04-08T11:42:40.958120Z",
+        "invitation": {},
+        "color": null,
+        "icon": null,
+        "logo": null,
+        "source_url": null,
+        "time_buffer": null,
+        "recurrence": false,
+        "recurrence_parent": null,
+        "sync_token": 8956066,
+        "length": null,
+        "is_suggestion": null,
+        "due": null,
+        "state": null,
+        "is_invitation": false,
+        "rsvp_status": null,
+        "permission": "subscribed_write",
+        "previous_permission": null
+    }]
+}
