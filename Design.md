@@ -37,3 +37,7 @@ EVENT_ID='811003bb26ce6df198a6f6ad77aadcbb_14601157609581'
      --globoff \
      "https://demo.calendar42.com/api/v2/event-subscriptions/?event_ids=[$EVENT_ID]" 
  ```
+
+## Steps how to develop
+I downloaded the responses from the c42 api
+and stored these as stubs for the api
