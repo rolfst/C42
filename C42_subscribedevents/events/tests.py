@@ -33,3 +33,17 @@ class SubscribedEventsViewTestCase(unittest.TestCase):
         request = self.factory.get(url)
         response = subscribed_events_detail(request, id='aab8933ed99')
         self.assertEqual(response.status_code, 200)
+
+
+    @httpretty.activate
+    def test_bad_id(self):
+        self.assertTrue(httpretty.is_enabled)
+        httpretty.register_uri(httpretty.GET,
+                          'https://demo.calendar42.com/api/v2/events/33',
+                          body=stubs['event_404'],
+                          content_type='application/json',
+                          status=404)
+        url = reverse('subscribed_event', args=['33'])
+        request = self.factory.get(url)
+        response = subscribed_events_detail(request, id='33')
+        self.assertEqual(response.status_code, 404)

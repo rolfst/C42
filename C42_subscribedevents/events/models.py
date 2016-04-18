@@ -1,4 +1,5 @@
 import json
+import sys
 import requests
 from django.conf import settings
 
@@ -34,9 +35,10 @@ class Event(objectjson):
     """Docstring for Event. """
 
     def __init__(self, id):
-        """ """
+        res = None
         res = requests.get('https://demo.calendar42.com/api/v2/events/' + id,
-                           headers=headers)
+                          headers=headers)
+        res.raise_for_status()
         jsonobject = json.loads(res.text)['data'][0]
         super().__init__(jsonobject)
 
@@ -57,6 +59,7 @@ class SubscribedEvents(list):
         list.__init__(self, *args)
         res = requests.get('https://demo.calendar42.com/api/v2/event-subscriptions/?event_ids=[' + id + ']',
                            headers=headers)
+        res.raise_for_status()
         jsonobject = json.loads(res.text)['data']
         events = [SubscribedEvent(event) for event in jsonobject]
         for event in events:
