@@ -1,0 +1,9 @@
+lib
+bin
+pip-selfcheck.json
+pyvenv.cfg
+__pycache__/
+share/
+.swp
+db.sqlite3
+.DS_store
