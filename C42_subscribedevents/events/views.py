@@ -5,9 +5,6 @@ from . import models
 
 
 class JSONResponse(HttpResponse):
-
-    """Docstring for JSON. """
-
     def __init__(self, data, **kwargs):
         """ """
         content = JSONRenderer().render(data)
@@ -25,6 +22,6 @@ def subscribed_events_detail(request, id):
         response_object = {
             'id': event.id,
             'title': event.title,
-            'subscribers': events
+            'names': events
         }
         return JSONResponse(response_object)
